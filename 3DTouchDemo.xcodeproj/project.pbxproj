@@ -10,11 +10,10 @@
 		817FA1341EB255320060679F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA1331EB255320060679F /* main.m */; };
 		817FA1371EB255320060679F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA1361EB255320060679F /* AppDelegate.m */; };
 		817FA13A1EB255320060679F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA1391EB255320060679F /* ViewController.m */; };
-		817FA13D1EB255320060679F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817FA13B1EB255320060679F /* Main.storyboard */; };
 		817FA13F1EB255320060679F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817FA13E1EB255320060679F /* Assets.xcassets */; };
-		817FA1421EB255320060679F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817FA1401EB255320060679F /* LaunchScreen.storyboard */; };
 		817FA14D1EB255320060679F /* _DTouchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA14C1EB255320060679F /* _DTouchDemoTests.m */; };
 		817FA1581EB255320060679F /* _DTouchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA1571EB255320060679F /* _DTouchDemoUITests.m */; };
+		817FA1671EB256860060679F /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FA1661EB256860060679F /* TouchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +40,7 @@
 		817FA1361EB255320060679F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		817FA1381EB255320060679F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		817FA1391EB255320060679F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		817FA13C1EB255320060679F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		817FA13E1EB255320060679F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		817FA1411EB255320060679F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		817FA1431EB255320060679F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817FA1481EB255320060679F /* 3DTouchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTouchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		817FA14C1EB255320060679F /* _DTouchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _DTouchDemoTests.m; sourceTree = "<group>"; };
@@ -51,6 +48,8 @@
 		817FA1531EB255320060679F /* 3DTouchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTouchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		817FA1571EB255320060679F /* _DTouchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _DTouchDemoUITests.m; sourceTree = "<group>"; };
 		817FA1591EB255320060679F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		817FA1651EB256860060679F /* TouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
+		817FA1661EB256860060679F /* TouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +100,13 @@
 		817FA1311EB255320060679F /* 3DTouchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				817FA1651EB256860060679F /* TouchViewController.h */,
+				817FA1661EB256860060679F /* TouchViewController.m */,
 				817FA1351EB255320060679F /* AppDelegate.h */,
 				817FA1361EB255320060679F /* AppDelegate.m */,
 				817FA1381EB255320060679F /* ViewController.h */,
 				817FA1391EB255320060679F /* ViewController.m */,
-				817FA13B1EB255320060679F /* Main.storyboard */,
 				817FA13E1EB255320060679F /* Assets.xcassets */,
-				817FA1401EB255320060679F /* LaunchScreen.storyboard */,
 				817FA1431EB255320060679F /* Info.plist */,
 				817FA1321EB255320060679F /* Supporting Files */,
 			);
@@ -207,6 +206,7 @@
 				TargetAttributes = {
 					817FA12E1EB255320060679F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5SAVUT7Y96;
 						ProvisioningStyle = Automatic;
 					};
 					817FA1471EB255320060679F = {
@@ -246,9 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				817FA1421EB255320060679F /* LaunchScreen.storyboard in Resources */,
 				817FA13F1EB255320060679F /* Assets.xcassets in Resources */,
-				817FA13D1EB255320060679F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +273,7 @@
 			files = (
 				817FA13A1EB255320060679F /* ViewController.m in Sources */,
 				817FA1371EB255320060679F /* AppDelegate.m in Sources */,
+				817FA1671EB256860060679F /* TouchViewController.m in Sources */,
 				817FA1341EB255320060679F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,25 +308,6 @@
 			targetProxy = 817FA1541EB255320060679F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		817FA13B1EB255320060679F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				817FA13C1EB255320060679F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		817FA1401EB255320060679F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				817FA1411EB255320060679F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		817FA15A1EB255320060679F /* Debug */ = {
@@ -424,9 +404,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5SAVUT7Y96;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whq.test.-DTouchDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whq.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -435,9 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5SAVUT7Y96;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whq.test.-DTouchDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whq.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

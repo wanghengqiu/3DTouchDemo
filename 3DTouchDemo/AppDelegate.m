@@ -2,11 +2,13 @@
 //  AppDelegate.m
 //  3DTouchDemo
 //
-//  Created by 王恒求 on 2017/4/28.
-//  Copyright © 2017年 王恒求. All rights reserved.
+//  Created by 王恒求 on 2016/8/18.
+//  Copyright © 2016年 王恒求. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "TouchViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    ViewController* vc = [[ViewController alloc]init];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
+    
+    [self createTouchItem:application];
+    
     return YES;
+}
+
+#pragma mark 3DTouch
+
+-(void)createTouchItem:(UIApplication*)application
+{
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShare];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypePlay];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeContact];
+    
+    
+    UIApplicationShortcutItem *shareItem = [[UIApplicationShortcutItem alloc]initWithType:@"shareItem" localizedTitle:@"分享" localizedSubtitle:@"点击分享" icon:icon1 userInfo:nil];
+    UIApplicationShortcutItem *jumpItem = [[UIApplicationShortcutItem alloc]initWithType:@"jumpItem" localizedTitle:@"跳转" localizedSubtitle:@"跳转至页面" icon:icon2 userInfo:nil];
+    UIApplicationShortcutItem *scanItem = [[UIApplicationShortcutItem alloc]initWithType:@"scanItem" localizedTitle:@"扫一扫" localizedSubtitle:@"扫描二维码" icon:icon3 userInfo:nil];
+    
+    application.shortcutItems=@[jumpItem,scanItem,shareItem];
+}
+
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    if ([shortcutItem.type isEqualToString:@"jumpItem"]) {
+        TouchViewController *vc = [[TouchViewController alloc]init];
+        [(UINavigationController*)self.window.rootViewController pushViewController:vc animated:YES];
+        //[self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    } else if ([shortcutItem.type isEqualToString:@"shareItem"]) {
+        
+    } else {
+        
+    }
 }
 
 
